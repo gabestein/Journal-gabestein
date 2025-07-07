@@ -77,11 +77,12 @@
                                     {{> loop}}
                                 {{/foreach}}
                             </div>
+                            <a class="gh-btn gh-loadmore" style="margin-top: 3rem;" href="/highlights-deep-dives">More Featured Posts</a>
                         </section>
                     {{/if}}
                 {{/get}}
 
-                {{#get "tags" include="count.posts" order="count.posts desc" limit="10" as |topic|}}
+                {{#get "tags" include="count.posts" order="count.posts desc" filter="slug:-blog+slug:-links-sundry+slug:-medium-archive-2015-2018+slug:-first-blog-archive-2009+slug:-highlights-deep-dives" limit="10" as |topic|}}
                     <section class="gh-section">
                         <h3 class="gh-section-title">Topics</h3>
 

@@ -9,6 +9,11 @@
         <footer class="gh-card-meta">
             <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
             <span class="gh-card-duration">{{reading_time}}</span>
+            {{#if tags}}
+                <span class=""gh-card-tags">
+                    {{tags autolink="false"}}
+                </span>
+            {{/if}}
             {{#if @site.comments_enabled}}
                 {{comment_count class="gh-card-comments"}}
             {{/if}}
