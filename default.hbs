@@ -62,6 +62,28 @@
         </div>
     </header>
 
+    {{^is "page"}}
+    {{#if @site.members_enabled}}
+    {{#unless @member}}
+        <div class="gh-subscribe">
+            <div class="gh-outer">
+                <section class="gh-subscribe-inner">
+                    <h3 class="gh-subscribe-title">Don't Subscribe</h3>
+                    <div class="gh-subscribe-description">Careful: if you subscribe, the latest posts will be sent to your inbox.</div>
+                    <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
+                        <div class="gh-subscribe-input-text">
+                            {{> icons/email}}
+                            jamie@example.com
+                        </div>
+                        <div class="gh-subscribe-input-btn">Subscribe</div>
+                    </a>
+                </section>
+            </div>
+        </div>
+    {{/unless}}
+    {{/if}}
+    {{/is}}
+
     {{{body}}}
 
     {{^is "page"}}
